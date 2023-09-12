@@ -2,13 +2,14 @@
 //작성일자 2023.09.11
 //
 
-import java.util.Scanner;
-
 public class Govillage {
 
 
     public void ActMenu() {
-        Scanner scanner = new Scanner(System.in);
+        ScannerManager.Initialize();
+        Charactor charactor = new Player(ScannerManager.ScanName());
+
+
         GoPub goPub = new GoPub();
         GoSmith goSmith = new GoSmith();
         GoDungeon goDungeon = new GoDungeon();
@@ -16,17 +17,16 @@ public class Govillage {
         while (true) {
             System.out.println("1.펍으로 이동 2.대장간으로 이동 3.던전으로 이동");
             System.out.println("이동할 장소를 선택해 주세요.");
-            int select = scanner.nextInt();
 
-            switch (select) {
+            switch (ScannerManager.Scan()) {
                 case "1":
-                    goPub.PubMenu();
+                    goPub.PubMenu(charactor);
                     break;
                 case "2":
-                    goSmith.SmithMenu;
+                    goSmith.SmithMenu(charactor);
                     break;
                 case "3":
-                    goDungeon.DungeonMenu;
+                    goDungeon.Update(charactor);
                     break;
                 default:
                     System.out.println("잘못된 선택지 입니다.");
