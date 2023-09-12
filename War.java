@@ -28,20 +28,23 @@ public class War {
 
         boolean keep =true;
 
-        while (MonsterManager.getInstance().getMonsterList(0) != null) {
+        while (MonsterManager.getInstance().size() > 0) {
             Monster m = MonsterManager.getInstance().getMonsterList(0);
+            System.out.println(m.getNickName()+"(이)가 나타났다!");
             while (m.getHp() > 0 && keep) {
                 PlayActMenu();
                 switch (ScannerManager.Scan()) {
                     case 1:
                         if(c.getSpeed() > m.getSpeed()) {
                             c.Attack(m);
-                            m.Attack(c);
+                            if(m.getHp()>0) {
+                            m.Attack(c); }
                         }
                         else {
                             m.Attack(c);
                             c.Attack(m);
                         }
+                        break;
                     case 2:
                         ((Player) c).Deffence(m);
                         break;
@@ -50,6 +53,7 @@ public class War {
                         break;
                 }
             }
+            System.out.println(m.getNickName()+"(이)가 죽었습니다.");
             MonsterManager.getInstance().remove();
         }
 
@@ -57,10 +61,13 @@ public class War {
             switch (i) {
                 case 1 :
                     GetGold(c,30);
+                    break;
                 case 2 :
                     GetGold(c,45);
+                    break;
                 case 3 :
                     GetGold(c,60);
+                    break;
             }
         }
 
