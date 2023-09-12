@@ -1,3 +1,6 @@
+//작성자 배준혁
+//작성일 2023.09.11
+//최종수정일 2023.09.12
 public abstract class Charactor {
     protected String nickName;
     protected int hp;
