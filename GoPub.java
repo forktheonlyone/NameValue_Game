@@ -1,3 +1,7 @@
+// 작성자 : 송한올
+// 2023.09.12
+// indev 0.01
+
 import java.util.concurrent.TimeUnit;
 
 public class GoPub {
@@ -25,31 +29,16 @@ public class GoPub {
                         player.setGold(player.getGold() -15);
                         ((Player) chr).hpRecovery(30);
                         System.out.println("낡은 침대이지만 포근함 만큼은 집을 생각나게 한다.");
-                        try {
-                            Thread.sleep(2 * 1000);
-                        } catch (InterruptedException ie) {
-                            Thread.currentThread().interrupt();
-                        }
                         System.out.println("( 체력을 모두 회복했다! )");
                         break;
                     }
                     else
                     {
                         System.out.println("골드가 부족합니다.");
-                        try {
-                            Thread.sleep(2 * 1000);
-                        } catch (InterruptedException ie) {
-                            Thread.currentThread().interrupt();
-                        }
                         break;
                     }
                 case 3 :
                     System.out.println("마을로 돌아간다.");
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
                     repeat = false;
                     break;
 
@@ -71,11 +60,6 @@ public class GoPub {
                 {
                     player.setGold(player.getGold() -3);
                     System.out.println("퍽퍽하고 단순한 밀빵이다.");
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
                     ((Player)chr).hpRecovery(5);
                     System.out.println("5 HP 회복 완료! 현재 HP : " + chr.getHp());
                     break;
@@ -83,11 +67,6 @@ public class GoPub {
                 else
                 {
                     System.out.println("골드가 부족합니다.");
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
                     break;
                 }
             case 2 :
@@ -95,11 +74,6 @@ public class GoPub {
                 {
                     player.setGold(player.getGold() -6);
                     System.out.println("옥수수가 들어간 따뜻한 스튜다.");
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
                     ((Player)chr).hpRecovery(10);
                     System.out.println("10 HP 회복 완료! 현재 HP : " + chr.getHp());
                     break;
@@ -107,11 +81,6 @@ public class GoPub {
                 else
                 {
                     System.out.println("골드가 부족합니다.");
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
                     break;
                 }
             case 3 :
@@ -119,11 +88,6 @@ public class GoPub {
                 {
                     System.out.println("머리 없이 통으로 구워진 칠면조다.");
                     player.setGold(player.getGold() -9);
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
                     ((Player)chr).hpRecovery(15);
                     System.out.println("15 HP 회복 완료! 현재 HP : " + chr.getHp());
                     break;
@@ -131,11 +95,6 @@ public class GoPub {
                 else
                 {
                     System.out.println("골드가 부족합니다.");
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
                     break;
                 }
         }
