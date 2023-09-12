@@ -30,20 +30,25 @@ public class War {
 
         while (MonsterManager.getInstance().size() > 0) {
             Monster m = MonsterManager.getInstance().getMonsterList(0);
-            System.out.println(m.getNickName()+"(이)가 나타났다!");
+            if(keep) {
+                System.out.println(m.getNickName() + "(이)가 나타났다!");
+            }
             while (m.getHp() > 0 && keep) {
                 PlayActMenu();
                 switch (ScannerManager.Scan()) {
                     case 1:
-                        if(c.getSpeed() > m.getSpeed()) {
+                        if (c.getSpeed() > m.getSpeed()) {
                             c.Attack(m);
-                            if(m.getHp()>0) {
-                            m.Attack(c); }
-                        }
-                        else {
+                            if (m.getHp() > 0) {
+                                m.Attack(c);
+                            }
+                        } else {
                             m.Attack(c);
-                            c.Attack(m);
+                            if (c.getHp() > 0) {
+                                c.Attack(m);
+                            }
                         }
+
                         break;
                     case 2:
                         ((Player) c).Deffence(m);
@@ -53,7 +58,9 @@ public class War {
                         break;
                 }
             }
-            System.out.println(m.getNickName()+"(이)가 죽었습니다.");
+            if(keep) {
+                System.out.println(m.getNickName() + "(이)가 죽었습니다.");
+            }
             MonsterManager.getInstance().remove();
         }
 
