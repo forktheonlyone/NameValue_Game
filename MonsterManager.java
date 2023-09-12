@@ -1,3 +1,8 @@
+// 작성자 홍주형
+// 작성일자 2023.09.11
+// 최종수정 2023.09.12
+
+
 import java.util.LinkedList;
 import java.util.List;
 
