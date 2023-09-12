@@ -15,6 +15,7 @@ public class Govillage {
         GoDungeon goDungeon = new GoDungeon();
 
         while (true) {
+            ((Player)charactor).Status();
             System.out.println("1.펍으로 이동 2.대장간으로 이동 3.던전으로 이동");
             System.out.println("이동할 장소를 선택해 주세요.");
 
