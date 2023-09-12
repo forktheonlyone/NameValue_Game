@@ -3,7 +3,7 @@
 
 public class GoSmith {
 
-    private void SmithMenu(Charactor chr)
+    public void SmithMenu(Charactor chr)
     {
         ScannerManager.Initialize();
         System.out.println("용암의 열기가 느껴지는 대장간이다.");
@@ -22,7 +22,7 @@ public class GoSmith {
                 case 1 :
                     if(player.getGold() >= 50)
                     {
-                        player.setGold(player.getGold() -= 50);
+                        player.setGold(player.getGold() -50);
                         player.setAtk(4);
                         System.out.println("강화에 성공하셨습니다!");
                     }
@@ -33,7 +33,7 @@ public class GoSmith {
                 case 2 :
                     if(player.getGold() >= 30)
                     {
-                        player.setGold(player.getGold() -= -30);
+                        player.setGold(player.getGold() -30);
                         player.setDef(1);
                         System.out.println("강화에 성공하셨습니다!");
                     }
@@ -55,7 +55,7 @@ public class GoSmith {
                 case 1 :
                     if(player.getGold() >= 100)
                     {
-                        player.setGold(player.getGold() -= -100);
+                        player.setGold(player.getGold() -100);
                         player.setAtk(6);
                         System.out.println("강화에 성공하셨습니다!");
                     }
@@ -66,7 +66,7 @@ public class GoSmith {
                 case 2 :
                     if(player.getGold() >= 60)
                     {
-                        player.setGold(player.getGold() -= -60);
+                        player.setGold(player.getGold() -60);
                         player.setDef(2);
                         System.out.println("강화에 성공하셨습니다!");
                     }
@@ -86,7 +86,7 @@ public class GoSmith {
                 case 1 :
                     if(player.getGold() >= 150)
                     {
-                        player.setGold(player.getGold() -= -150);
+                        player.setGold(player.getGold() -150);
                         player.setAtk(8);
                         System.out.println("강화에 성공하셨습니다!");
                     }
@@ -97,7 +97,7 @@ public class GoSmith {
                 case 2 :
                     if(player.getGold() >= 90)
                     {
-                        player.setGold(player.getGold() -= -90);
+                        player.setGold(player.getGold() -90);
                         player.setDef(3);
                         System.out.println("강화에 성공하셨습니다!");
                     }
