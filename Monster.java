@@ -18,7 +18,7 @@ public class Monster extends Charactor {
         if(damage<1){damage=1;}
         if(enemy.getHp() < damage){System.exit(0);}
         else {enemy.setHp(enemy.getHp() - damage);}
-        System.out.println(getNickName()+"가"+enemy.getNickName()+"에게"+damage+"만큼 데미지를 주었습니다.");
+        System.out.println(getNickName()+"(이)가 "+enemy.getNickName()+"에게 "+damage+"만큼 데미지를 주었습니다.");
         System.out.println(enemy.nickName+"의 현재 HP : "+enemy.hp);
     }
 }
