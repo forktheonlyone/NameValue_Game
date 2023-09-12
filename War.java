@@ -5,19 +5,21 @@ public class War {
 
         switch (i) {
             case 1 :
-                System.out.print("고블린 던전에 입장하였습니다.");
+                System.out.println("고블린 소굴에 입장하였습니다.");
                 MonsterManager.getInstance().GoblinList();
                 break;
             case 2 :
-                System.out.print("오크 던전에 입장하였습니다.");
+                System.out.println("오크의 전초기지에 입장하였습니다.");
                 MonsterManager.getInstance().OrkList();
                 break;
             case 3 :
-                System.out.print("나이트 엘프 던전에 입장하였습니다.");
+                System.out.println("나이트 엘프의 숲에 입장하였습니다.");
                 MonsterManager.getInstance().ElfList();
                 break;
             case 4 :
-                System.out.print("리치 던전에 입장하였습니다.");
+                System.out.println("얼어붙은 설산에 입장하였습니다.");
+                System.out.println("검이 빛나며 빛이 온몸을 감싼다...");
+                System.out.println("얼어붙은 설산의 동굴 속 리치왕 아서스 메네실이 서리한을 집어든다.");
                 MonsterManager.getInstance().LastBoss();
                 ((Player)c).setMaxHp(50);
                 ((Player)c).hpRecovery(50);

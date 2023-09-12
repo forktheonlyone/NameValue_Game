@@ -4,11 +4,11 @@ public class GoDungeon {
     War war = new War();
 
     public void DungeonMenu() {
-        System.out.println("1.고블린 던전 ");
-        System.out.println("2.오크 던전 ");
-        System.out.println("3.엘프 던전 ");
-        System.out.println("4.리치 던전 ");
-        System.out.println("5.돌아가기 ");
+        System.out.println("1.고블린 소굴");
+        System.out.println("2.오크의 전초기지");
+        System.out.println("3.나이트 엘프의 숲");
+        System.out.println("4.얼어붙은 설산");
+        System.out.println("5.마을로 돌아가기 ");
     }
     public void Update(Charactor c) {
         DungeonMenu();
