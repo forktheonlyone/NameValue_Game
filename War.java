@@ -1,0 +1,79 @@
+// 박세진 , 2023.09.11
+
+public class War {
+    public void Fight(Charactor c, int i){
+
+        switch (i) {
+            case 1 :
+                System.out.println("고블린 소굴에 입장하였습니다.");
+                MonsterManager.getInstance().GoblinList();
+                break;
+            case 2 :
+                System.out.println("오크의 전초기지에 입장하였습니다.");
+                MonsterManager.getInstance().OrkList();
+                break;
+            case 3 :
+                System.out.println("나이트 엘프의 숲에 입장하였습니다.");
+                MonsterManager.getInstance().ElfList();
+                break;
+            case 4 :
+                System.out.println("얼어붙은 설산에 입장하였습니다.");
+                System.out.println("검이 빛나며 빛이 온몸을 감싼다...");
+                System.out.println("얼어붙은 설산의 동굴 속 리치왕 아서스 메네실이 서리한을 집어든다.");
+                MonsterManager.getInstance().LastBoss();
+                ((Player)c).setMaxHp(50);
+                ((Player)c).hpRecovery(50);
+                break;
+        }
+
+        boolean keep =true;
+
+        while (MonsterManager.getInstance().getMonsterList(0) != null) {
+            Monster m = MonsterManager.getInstance().getMonsterList(0);
+            while (m.getHp() > 0 && keep) {
+                PlayActMenu();
+                switch (ScannerManager.Scan()) {
+                    case 1:
+                        if(c.getSpeed() > m.getSpeed()) {
+                            c.Attack(m);
+                            m.Attack(c);
+                        }
+                        else {
+                            m.Attack(c);
+                            c.Attack(m);
+                        }
+                    case 2:
+                        ((Player) c).Deffence(m);
+                        break;
+                    case 3:
+                        keep = false;
+                        break;
+                }
+            }
+            MonsterManager.getInstance().remove();
+        }
+
+        if(keep) {
+            switch (i) {
+                case 1 :
+                    GetGold(c,30);
+                case 2 :
+                    GetGold(c,45);
+                case 3 :
+                    GetGold(c,60);
+            }
+        }
+
+    }
+
+    public void PlayActMenu() {
+        System.out.println("1.공격하기 ");
+        System.out.println("2.막기 ");
+        System.out.println("3.도망가기 ");
+    }
+
+    public void GetGold(Charactor c,int gold) {
+        System.out.println(gold + "골드를 획득하였습니다.");
+        ((Player)c).setGold(((Player)c).getGold()+gold);
+    }
+}
