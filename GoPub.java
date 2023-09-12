@@ -7,25 +7,25 @@ public class GoPub {
         boolean repeat = true;
         while (repeat)
         {
-            System.out.println("0. 음식 주문하기");
+            System.out.println("1. 음식 주문하기");
             System.out.println("( 음식을 이용해 체력을 회복하세요. )");
-            System.out.println("1. 방을 빌려 침대에서 잠에 들기 - 15 Gold ");
-            System.out.println("2. 돌아가기");
+            System.out.println("2. 방을 빌려 침대에서 잠에 들기 ( -15 Gold )");
+            System.out.println("3. 마을로 돌아가기");
             switch (ScannerManager.Scan())
             {
-                case 0 :
-                    System.out.println("0. 빵 - 3 Gold");
+                case 1 :
+                    System.out.println("1. 빵 ( -3 Gold )");
                     System.out.println("( + 5 HP ");
-                    System.out.println("1. 스튜 - 6 Gold");
+                    System.out.println("2. 스튜 ( -6 Gold )");
                     System.out.println("( + 10 HP ");
-                    System.out.println("2. 익힌 칠면조 - 9 Gold");
+                    System.out.println("3. 익힌 칠면조 ( -9 Gold )");
                     System.out.println("( + 15 HP ");
                     food(chr);
                     break;
-                case 1 :
+                case 2 :
                     ((Player)chr).hpRecovery(30);
                     break;
-                case 2 :
+                case 3 :
                     repeat = false;
                     break;
 
@@ -41,13 +41,13 @@ public class GoPub {
     {
         switch (ScannerManager.Scan())
         {
-            case 0 :
+            case 1 :
                 ((Player)chr).hpRecovery(5);
                 System.out.println("5 HP 회복 완료! 현재 HP : " + chr.getHp());
-            case 1 :
+            case 2 :
                 ((Player)chr).hpRecovery(10);
                 System.out.println("10 HP 회복 완료! 현재 HP : " + chr.getHp());
-            case 2 :
+            case 3 :
                 ((Player)chr).hpRecovery(15);
                 System.out.println("15 HP 회복 완료! 현재 HP : " + chr.getHp());
         }
