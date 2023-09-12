@@ -1,6 +1,7 @@
 //작성자 홍주형
 //작성일자 2023.09.11
-//
+//최종수장 2023.09.12
+
 
 public class Govillage {
 
@@ -15,7 +16,8 @@ public class Govillage {
         GoDungeon goDungeon = new GoDungeon();
 
         while (true) {
-            System.out.println("1.펍으로 이동 2.대장간으로 이동 3.던전으로 이동");
+            ((Player)charactor).Status();
+            System.out.println("1.여관으로 이동 2.대장간으로 이동 3.던전으로 이동");
             System.out.println("이동할 장소를 선택해 주세요.");
 
             switch (ScannerManager.Scan()) {

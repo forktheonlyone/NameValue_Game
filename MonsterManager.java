@@ -1,3 +1,8 @@
+// 작성자 홍주형
+// 작성일자 2023.09.11
+// 최종수정 2023.09.12
+
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,7 +27,7 @@ public class MonsterManager {
         // Monster creation
         MonsterList.add(new Monster("고블린", 10, 1, 0, 9));
         MonsterList.add(new Monster("고블린", 10, 1, 0, 9));
-        MonsterList.add(new Monster("고블린보스", 14, 2, 0, 9));
+        MonsterList.add(new Monster("홉 고블린 마크노크", 14, 2, 0, 9));
     }
 
     protected void OrkList()
@@ -30,15 +35,15 @@ public class MonsterManager {
         // Monster creation
         MonsterList.add(new Monster("오크", 12, 3, 0, 9));
         MonsterList.add(new Monster("오크", 12, 3, 0, 9));
-        MonsterList.add(new Monster("오크보스", 26, 4, 0, 9));
+        MonsterList.add(new Monster("오크 족장 라흐라프", 26, 4, 0, 9));
     }
     protected void ElfList()
     {
         // Monster creation
-        MonsterList.add(new Monster("나이트엘프정찰병", 12, 5, 0, 9));
-        MonsterList.add(new Monster("나이트엘프정찰병", 12, 5, 0, 9));
-        MonsterList.add(new Monster("나이트엘프네임드", 15, 7, 0, 9));
-        MonsterList.add(new Monster("나이트엘프보스", 20, 8, 0, 9));
+        MonsterList.add(new Monster("나이트 엘프 정찰병", 12, 5, 0, 9));
+        MonsterList.add(new Monster("나이트 엘프 정찰병", 12, 5, 0, 9));
+        MonsterList.add(new Monster("나이트 엘프 정예병 퀴르귀스", 15, 7, 0, 9));
+        MonsterList.add(new Monster("나이트 엘프 장로 반스톰프", 20, 8, 0, 9));
     }
     protected void LastBoss()
     {
@@ -46,6 +51,10 @@ public class MonsterManager {
         MonsterList.add(new Monster("리치왕 아서스 메놀드", 92, 9, 1, 11));
     }
 
+
+    public int size(){
+        return MonsterList.size();
+    }
 
 
     public Monster getMonsterList(int i) {
