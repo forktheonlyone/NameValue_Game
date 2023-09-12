@@ -1,6 +1,7 @@
 // 박세진 , 2023.09.11
 
 public class GoDungeon {
+    War war = new War();
 
     public void DungeonMenu() {
         System.out.println("1.고블린 던전 ");
@@ -9,20 +10,20 @@ public class GoDungeon {
         System.out.println("4.리치 던전 ");
         System.out.println("5.돌아가기 ");
     }
-    public void Update(War war,Charactor c) {
+    public void Update(Charactor c) {
         DungeonMenu();
         switch (ScannerManager.Scan()) {
             case 1:
-                war.GoblinD(c);
+                war.Fight(c,1);
                 break;
             case 2:
-                war.OrkD(c);
+                war.Fight(c,2);
                 break;
             case 3:
-                war.ElfD(c);
+                war.Fight(c,3);
                 break;
             case 4:
-                war.LichD(c);
+                war.Fight(c,4);
                 System.out.println("Game Clear!!!");
                 System.exit(0);
                 break;
