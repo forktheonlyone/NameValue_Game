@@ -18,7 +18,7 @@ public class Govillage {
         while (true) {
             ((Player)charactor).Status();
             System.out.println("");
-            System.out.println("마을 사람들이 부지런히 움지이고 있다.");
+            System.out.println("마을 사람들이 부지런히 움직이고 있다.");
             System.out.println("");
 
             System.out.println("1.여관으로 이동 2.대장간으로 이동 3.던전으로 이동");
