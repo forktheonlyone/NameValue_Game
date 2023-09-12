@@ -19,13 +19,13 @@ public class Govillage {
             System.out.println("이동할 장소를 선택해 주세요.");
 
             switch (ScannerManager.Scan()) {
-                case "1":
+                case 1:
                     goPub.PubMenu(charactor);
                     break;
-                case "2":
+                case 2:
                     goSmith.SmithMenu(charactor);
                     break;
-                case "3":
+                case 3:
                     goDungeon.Update(charactor);
                     break;
                 default:
