@@ -67,4 +67,14 @@ public class Player extends Charactor{
                 + recover + "만큼 회복했습니다. ");
         System.out.println(nickName + "의 현재 HP : " + hp);
     }
+
+    public void Status(){
+        System.out.println("===========정보창============");
+        System.out.println("이름 : " + nickName);
+        System.out.println("체력 : " + hp+" / "+maxHp);
+        System.out.println("공격력 : " + atk);
+        System.out.println("방어력 : " + def);
+        System.out.println("골드 : " + gold);
+        System.out.println("=============================");
+    }
 }
