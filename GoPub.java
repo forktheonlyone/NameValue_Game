@@ -1,8 +1,6 @@
 // 작성자 : 송한올
-// 2023.09.12
-// indev 0.01
-
-import java.util.concurrent.TimeUnit;
+// 2023.09.13
+// indev 0.02
 
 public class GoPub {
 
@@ -25,18 +23,9 @@ public class GoPub {
                     foodMenu(chr);
                     break;
                 case 2 :
-                    if (player.getGold() >= 15) {
-                        player.setGold(player.getGold() -15);
-                        ((Player) chr).hpRecovery(30);
-                        System.out.println("낡은 침대이지만 포근함 만큼은 집을 생각나게 한다.");
-                        System.out.println("( 체력을 모두 회복했다! )");
-                        break;
-                    }
-                    else
-                    {
-                        System.out.println("골드가 부족합니다.");
-                        break;
-                    }
+                    System.out.println("낡은 침대이지만 포근함 만큼은 집을 생각나게 한다.");
+                    Bill(chr, 3, 5, "체력을 모두 회복했다!");
+                    break;
                 case 3 :
                     System.out.println("마을로 돌아간다.");
                     repeat = false;
@@ -56,47 +45,27 @@ public class GoPub {
         switch (ScannerManager.Scan())
         {
             case 1 :
-                if ((player.getGold() >= 3))
-                {
-                    player.setGold(player.getGold() -3);
-                    System.out.println("퍽퍽하고 단순한 밀빵이다.");
-                    ((Player)chr).hpRecovery(5);
-                    System.out.println("5 HP 회복 완료! 현재 HP : " + chr.getHp());
-                    break;
-                }
-                else
-                {
-                    System.out.println("골드가 부족합니다.");
-                    break;
-                }
+                Bill(chr, 3, 5, "5 HP 회복 완료!");
+                break;
             case 2 :
-                if ((player.getGold() >= 6))
-                {
-                    player.setGold(player.getGold() -6);
-                    System.out.println("옥수수가 들어간 따뜻한 스튜다.");
-                    ((Player)chr).hpRecovery(10);
-                    System.out.println("10 HP 회복 완료! 현재 HP : " + chr.getHp());
-                    break;
-                }
-                else
-                {
-                    System.out.println("골드가 부족합니다.");
-                    break;
-                }
+                Bill(chr, 6, 10, "10 HP 회복 완료!");
+                break;
             case 3 :
-                if ((player.getGold() >= 9))
-                {
-                    System.out.println("머리 없이 통으로 구워진 칠면조다.");
-                    player.setGold(player.getGold() -9);
-                    ((Player)chr).hpRecovery(15);
-                    System.out.println("15 HP 회복 완료! 현재 HP : " + chr.getHp());
-                    break;
-                }
-                else
-                {
-                    System.out.println("골드가 부족합니다.");
-                    break;
-                }
+                Bill(chr, 9, 15, "15 HP 회복 완료!");
+                break;
+        }
+    }
+    private void Bill(Charactor chr, int pay, int heal, String healinfo)
+    {
+        if (((Player)chr).getGold() >= pay)
+        {
+            ((Player)chr).setGold(((Player)chr).getGold() - pay);
+            ((Player)chr).hpRecovery(heal);
+            System.out.println(healinfo + chr.getHp());
+        }
+        else
+        {
+            System.out.println("골드가 부족합니다.");
         }
     }
 }
