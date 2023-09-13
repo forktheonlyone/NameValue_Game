@@ -23,11 +23,11 @@ public class Player extends Charactor{
 
     @Override
     public void Attack(Charactor enemy) {
-        int dmg = atk - def;
+        int dmg = atk - enemy.getDef();
         if(dmg<1) {dmg=1;}
 
         if(enemy.getHp() < atk) {enemy.setHp(0);}
-        else {enemy.setHp(enemy.getHp() - atk);}
+        else {enemy.setHp(enemy.getHp() - dmg);}
 
         System.out.println(nickName + "(이)가 " + enemy.nickName + "에게 "
                 + dmg + "만큼 데미지를 주었습니다. ");
@@ -43,7 +43,7 @@ public class Player extends Charactor{
         if(hp > dmg) {hp -= dmg;}
         else{
             System.out.println(nickName + "의 현재 HP : 0");
-            System.out.println("나는 픽 쓰러졌다.\n\n" +
+            System.out.println(nickName+"(은)는 픽 쓰러졌다.\n\n" +
                     "더 이상 일어설 힘도 나지 않고 눈은 점점 감긴다.\n" +
                     "누군가가 도움을 줬으면 했다.\n\n" +
                     "하지만 아무도 오지 않았다.\n\n" +
