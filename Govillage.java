@@ -14,7 +14,9 @@ public class Govillage {
             System.out.println("마을 사람들이 부지런히 움직이고 있다.");
             System.out.println("");
 
-            System.out.println("1.여관으로 이동 2.대장간으로 이동 3.던전으로 이동");
+            System.out.println("1.여관으로 이동");
+            System.out.println("2.대장간으로 이동");
+            System.out.println("3.던전으로 이동");
             System.out.println("이동할 장소를 선택해 주세요.");
 
             switch (ScannerManager.Scan()) {
