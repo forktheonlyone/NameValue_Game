@@ -42,8 +42,8 @@ public class MonsterManager {
         // Monster creation
         MonsterList.add(new Monster("나이트 엘프 정찰병", 12, 5, 0, 9));
         MonsterList.add(new Monster("나이트 엘프 정찰병", 12, 5, 0, 9));
-        MonsterList.add(new Monster("나이트 엘프 정예병 퀴르귀스", 15, 7, 0, 9));
-        MonsterList.add(new Monster("나이트 엘프 장로 반스톰프", 20, 8, 0, 9));
+        MonsterList.add(new Monster("나이트 엘프 정예병 퀴르귀스", 15, 6, 0, 9));
+        MonsterList.add(new Monster("나이트 엘프 장로 반스톰프", 20, 7, 0, 9));
     }
     protected void LastBoss()
     {
