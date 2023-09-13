@@ -1,6 +1,6 @@
 // 작성자 : 송한올
 // 23.09.13
-// indev 0.03
+// indev 0.04
 
 public class GoSmith {
     private int[][] gear =
@@ -37,7 +37,7 @@ public class GoSmith {
             }
             else
             {
-                System.out.println("1. 무기 강화");
+                System.out.println("1. 무기 강화 / 가격 : "+upgradesGold[swordUpLv][0]);
             }
             if (armorUpLv == 3)
             {
@@ -45,7 +45,7 @@ public class GoSmith {
             }
             else
             {
-                System.out.println("2. 방어구 강화");
+                System.out.println("2. 방어구 강화 / 가격 : "+upgradesGold[armorUpLv][1]);
             }
             System.out.println("3. 마을로 돌아가기");
             switch (ScannerManager.Scan())
