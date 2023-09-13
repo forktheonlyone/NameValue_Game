@@ -21,8 +21,8 @@ public class War {
                 System.out.println("검이 빛나며 빛이 온몸을 감싼다...");
                 System.out.println("얼어붙은 설산의 동굴 속 리치왕 아서스 메네실이 서리한을 집어든다.");
                 MonsterManager.getInstance().LastBoss();
-                ((Player)c).setMaxHp(50);
-                ((Player)c).hpRecovery(50);
+                ((Player)c).setMaxHp(80);
+                ((Player)c).hpRecovery(80);
                 break;
         }
 
