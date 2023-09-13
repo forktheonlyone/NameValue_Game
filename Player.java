@@ -29,7 +29,7 @@ public class Player extends Charactor{
         if(enemy.getHp() < atk) {enemy.setHp(0);}
         else {enemy.setHp(enemy.getHp() - atk);}
 
-        System.out.print(nickName + "(이)가 " + enemy.nickName + "에게 "
+        System.out.println(nickName + "(이)가 " + enemy.nickName + "에게 "
                 + dmg + "만큼 데미지를 주었습니다. ");
         System.out.println(enemy.nickName + "의 현재 HP : " + enemy.hp);
     }
@@ -37,7 +37,7 @@ public class Player extends Charactor{
     public void Deffence(Charactor enemy){
         int dmg = (enemy.atk - def + 1)/2;
         if(dmg<1) {dmg=1;}
-        System.out.print(enemy.nickName + "(이)가 " + nickName + "에게 "
+        System.out.println(enemy.nickName + "(이)가 " + nickName + "에게 "
                 + dmg + "만큼 데미지를 주었습니다. ");
 
         if(hp > dmg) {hp -= dmg;}
