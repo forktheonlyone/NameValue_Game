@@ -6,14 +6,7 @@
 public class Govillage {
 
 
-    public void ActMenu() {
-        ScannerManager.Initialize();
-        Charactor charactor = new Player(ScannerManager.ScanName());
-
-
-        GoPub goPub = new GoPub();
-        GoSmith goSmith = new GoSmith();
-        GoDungeon goDungeon = new GoDungeon();
+    public void ActMenu(Charactor charactor,GoPub goPub,GoSmith goSmith,GoDungeon goDungeon) {
 
         while (true) {
             ((Player)charactor).Status();
