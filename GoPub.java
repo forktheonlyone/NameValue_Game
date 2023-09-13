@@ -1,12 +1,11 @@
 // 작성자 : 송한올
 // 2023.09.13
-// indev 0.03
+// indev 0.04
 
 public class GoPub {
 
     public void PubMenu(Charactor chr)
     {
-        Player player = new Player(chr.getNickName());
         System.out.println("맥주잔이 부딪히는 소리, 바드의 악기 연주 소리가 들린다.");
         boolean repeat = true;
         while (repeat)
