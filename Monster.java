@@ -19,7 +19,14 @@ public class Monster extends Charactor {
     public void Attack(Charactor enemy) {
         int damage = atk - enemy.def;
         if(damage<1){damage=1;}
-        if(enemy.getHp() <= damage){System.exit(0);}
+        if(enemy.getHp() <= damage)
+        {
+            System.out.println("나는 픽 쓰러졌다.");
+            System.out.println("더 이상 일어설 힘도 나지 않고 눈은 점점 감긴다.");
+            System.out.println("누군가가 도움을 줬으면 했다.");
+            System.out.println("하지만 아무도 오지 않았다.");
+            System.exit(0);
+        }
         else {enemy.setHp(enemy.getHp() - damage);}
         System.out.println(getNickName()+"(이)가 "+enemy.getNickName()+"에게 "+damage+"만큼 데미지를 주었습니다.");
         System.out.println(enemy.nickName+"의 현재 HP : "+enemy.hp);
