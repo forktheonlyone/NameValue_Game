@@ -10,6 +10,7 @@ public class GoDungeon {
         System.out.println("4.얼어붙은 설산");
         System.out.println("5.마을로 돌아가기 ");
     }
+
     public void Update(Charactor c) {
         DungeonMenu();
         switch (ScannerManager.Scan()) {
@@ -24,7 +25,11 @@ public class GoDungeon {
                 break;
             case 4:
                 war.Fight(c,4);
-                System.out.println("Game Clear!!!");
+                System.out.println("세계는 평화를 되찾았고 우리의 수도인 스톰윈드에 내려졌던 언데드의 저주도 해제되었고 도시와 마을 곳곳에는 아이들의 웃음소리가 다시 들려오기 시작했다. \n" +
+                        "\n" +
+                        "이 비극이 두번다시 되는것을 막기위해 나는 설산으로 향했다.\n" +
+                        "\n" +
+                        "True Ending");
                 System.exit(0);
                 break;
             case 5:

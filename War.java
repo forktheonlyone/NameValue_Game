@@ -26,6 +26,7 @@ public class War {
                 break;
         }
 
+
         boolean keep =true;
 
         while (MonsterManager.getInstance().size() > 0) {
@@ -48,13 +49,15 @@ public class War {
                                 c.Attack(m);
                             }
                         }
-
                         break;
                     case 2:
                         ((Player) c).Deffence(m);
                         break;
                     case 3:
-                        keep = false;
+                        if(i<4) { keep = false; }
+                        else {
+                            System.out.println("도망칠 수 없다!");
+                        }
                         break;
                 }
             }
