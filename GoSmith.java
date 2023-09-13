@@ -1,11 +1,10 @@
 // 작성자 : 송한올
 // 23.09.13
-// indev 0.02
+// indev 0.03
 
 public class GoSmith {
     private int[][] gear =
             {
-                    {2, 0},
                     {4, 1},
                     {6, 2},
                     {8, 3}
@@ -32,7 +31,7 @@ public class GoSmith {
         boolean repeat = true;
         while (repeat)
         {
-            if (swordUpLv == 4 )
+            if (swordUpLv == 3)
             {
                 System.out.println("무기 강화 최대치");
             }
@@ -40,7 +39,7 @@ public class GoSmith {
             {
                 System.out.println("1. 무기 강화");
             }
-            if (armorUpLv == 4)
+            if (armorUpLv == 3)
             {
                 System.out.println("방어구 강화 최대치");
             }
@@ -52,15 +51,17 @@ public class GoSmith {
             switch (ScannerManager.Scan())
             {
                 case 1 :
-                    if (swordUpLv == 4)
+                    if (swordUpLv == 3)
                     {
                         System.out.println("대장장이 : 내 능력으로는 더 이상 강화가 불가능하네.");
                     }
                     else if (((Player)chr).getGold() >= upgradesGold[swordUpLv][0])
                     {
                         ((Player)chr).setGold(((Player)chr).getGold() - upgradesGold[swordUpLv][0]);
-                        ((Player)chr).setAtk(gear[swordUpLv][0]);
+                        chr.setAtk(gear[swordUpLv][0]);
                         swordUpLv++;
+                        System.out.println("강화가 완료되었습니다.");
+                        System.out.println("현재 공격력 : " + ((Player)chr).getAtk());
                     }
                     else
                     {
@@ -68,15 +69,17 @@ public class GoSmith {
                     }
                     break;
                 case 2 :
-                    if (armorUpLv == 4)
+                    if (armorUpLv == 3)
                     {
                         System.out.println("대장장이 : 내 능력으로는 더 이상 강화가 불가능하네.");
                     }
                     else if (((Player)chr).getGold() >= upgradesGold[armorUpLv][1])
                     {
                         ((Player)chr).setGold(((Player)chr).getGold() - upgradesGold[armorUpLv][1]);
-                        ((Player)chr).setDef(gear[armorUpLv][1]);
+                        chr.setDef(gear[armorUpLv][1]);
                         armorUpLv++;
+                        System.out.println("강화가 완료되었습니다.");
+                        System.out.println("현재 방어력 : " + ((Player)chr).getDef());
                     }
                     else
                     {

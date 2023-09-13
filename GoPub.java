@@ -1,6 +1,6 @@
 // 작성자 : 송한올
 // 2023.09.13
-// indev 0.02
+// indev 0.03
 
 public class GoPub {
 
@@ -20,11 +20,12 @@ public class GoPub {
                     System.out.println("1. 빵 ( -3 Gold ) / ( +5 HP )");
                     System.out.println("2. 스튜 ( -6 Gold ) / ( +10 HP )");
                     System.out.println("3. 칠면조 구이 ( -9 Gold ) / ( +15 HP )");
+                    System.out.println("4. 취소");
                     foodMenu(chr);
                     break;
                 case 2 :
                     System.out.println("낡은 침대이지만 포근함 만큼은 집을 생각나게 한다.");
-                    Bill(chr, 3, 5, "체력을 모두 회복했다!");
+                    Bill(chr, 15, 30, "체력을 모두 회복했다!");
                     break;
                 case 3 :
                     System.out.println("마을로 돌아간다.");
@@ -53,6 +54,9 @@ public class GoPub {
             case 3 :
                 Bill(chr, 9, 15, "15 HP 회복 완료!");
                 break;
+            case 4 :
+                break;
+
         }
     }
     private void Bill(Charactor chr, int pay, int heal, String healinfo)
@@ -61,7 +65,8 @@ public class GoPub {
         {
             ((Player)chr).setGold(((Player)chr).getGold() - pay);
             ((Player)chr).hpRecovery(heal);
-            System.out.println(healinfo + chr.getHp());
+            System.out.println(healinfo);
+            System.out.println("현재 체력 : " + ((Player)chr).getHp() + "HP");
         }
         else
         {
