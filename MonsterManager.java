@@ -48,7 +48,7 @@ public class MonsterManager {
     protected void LastBoss()
     {
         // Monster creation
-        MonsterList.add(new Monster("리치왕 아서스 메놀드", 92, 9, 1, 11));
+        MonsterList.add(new Monster("리치왕 아서스 메놀드", 91, 9, 1, 11));
     }
 
 
