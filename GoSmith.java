@@ -1,6 +1,6 @@
 // 작성자 : 송한올
-// 23.09.12
-// indev 0.01
+// 23.09.13
+// indev 0.02
 
 public class GoSmith {
     private int[][] gear =
@@ -29,8 +29,6 @@ public class GoSmith {
         System.out.println("철이 부딪히는 소리가 반복적으로 들려온다.");
         System.out.println("대장장이 : 도움이 필요한가?");
 
-        Player player = new Player(chr.getNickName());
-
         boolean repeat = true;
         while (repeat)
         {
@@ -58,10 +56,10 @@ public class GoSmith {
                     {
                         System.out.println("대장장이 : 내 능력으로는 더 이상 강화가 불가능하네.");
                     }
-                    else if (player.getGold() >= upgradesGold[swordUpLv][0])
+                    else if (((Player)chr).getGold() >= upgradesGold[swordUpLv][0])
                     {
-                        player.setGold(player.getGold() - upgradesGold[swordUpLv][0]);
-                        player.setAtk(gear[swordUpLv][0]);
+                        ((Player)chr).setGold(((Player)chr).getGold() - upgradesGold[swordUpLv][0]);
+                        ((Player)chr).setAtk(gear[swordUpLv][0]);
                         swordUpLv++;
                     }
                     else
@@ -74,10 +72,10 @@ public class GoSmith {
                     {
                         System.out.println("대장장이 : 내 능력으로는 더 이상 강화가 불가능하네.");
                     }
-                    else if (player.getGold() >= upgradesGold[armorUpLv][1])
+                    else if (((Player)chr).getGold() >= upgradesGold[armorUpLv][1])
                     {
-                        player.setGold(player.getGold() - upgradesGold[armorUpLv][1]);
-                        player.setDef(gear[armorUpLv][1]);
+                        ((Player)chr).setGold(((Player)chr).getGold() - upgradesGold[armorUpLv][1]);
+                        ((Player)chr).setDef(gear[armorUpLv][1]);
                         armorUpLv++;
                     }
                     else
