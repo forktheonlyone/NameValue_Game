@@ -12,9 +12,6 @@ public class Monster extends Charactor {
         this.speed=speed;
 
     }
-
-
-
     @Override
     public void Attack(Charactor enemy) {
         int damage = atk - enemy.def;
@@ -33,7 +30,4 @@ public class Monster extends Charactor {
         System.out.println(getNickName()+"(이)가 "+enemy.getNickName()+"에게 "+damage+"만큼 데미지를 주었습니다.");
         System.out.println(enemy.nickName+"의 현재 HP : "+enemy.hp);
     }
-
-
-
 }
